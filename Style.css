@@ -1,0 +1,12 @@
+h1 {
+}
+
+header{
+  background-image: url('https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/playstations50.jpg'); 
+  background-size: 30% 100%;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-x: center;
+
+}
