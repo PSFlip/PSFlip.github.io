@@ -1,12 +1,30 @@
 h1 {
+  font-weight: 500;
+  font-stretch: extra-expanded;
+  font-family: impact, fantasy;
+  font-size: 80px;
+  text-align: center;
+  color: #5cc9fb;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+h2{
+  font-weight: 300;
+  font-stretch: extra-expanded;
+  font-family: impact, fantasy;
+  font-size: 40px;
+  text-align: center;
+  color: #1e5ddb;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#bannerimage {
+  background-image: url(https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/playstations50.jpg);
+  background-repeat: repeat-x;
+  background-size: 20% 100%;
 
-header{
-  background-image: url('https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/playstations50.jpg'); 
-  background-size: 30% 100%;
-  background-position: top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position-x: center;
 
+}
+ul {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
