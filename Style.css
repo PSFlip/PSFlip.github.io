@@ -28,3 +28,42 @@ ul {
   position: sticky;
   top: 0;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #aebfd4;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #2e393d;
+}
+.active {
+  background-color: #5cc9fb;
+}
+
+.products {
+
+}
+.product {
+  width: 20%;
+  float: right;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
