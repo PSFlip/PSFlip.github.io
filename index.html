@@ -1,177 +1,195 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <link rel="stylesheet" href="Style.css">
-        <link rel="icon" type="images/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1280px-Playstation_logo_colour.svg.png" />
-      <title>PSFlip</title>
-  </head>
-  <body>
-      <header id="bannerimage">
-        <br>
-        <h1>PSFlip</h1>
-        <h2>Flip your old games for something you have never played before!</h2>
-        <br>
-      </header>
+
+<head>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="icon" type="images/x-icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1280px-Playstation_logo_colour.svg.png" />
+  <title>PSFlip</title>
+</head>
+
+<body>
+  <header id="bannerimage">
+    <br>
+    <h1>PSFlip</h1>
+    <h2>Flip your old games for something you have never played before!</h2>
+    <br>
+  </header>
   <ul>
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="Games.html">Games</a></li>
-  <li><a href="Accessories.html">Accessories </a></li>
-  <li><a href="Consoles.html">Consoles</a></li>
-  <li><a href="About_us.html">About us</a></li>
-</ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="Games.html">Games</a></li>
+    <li><a href="Accessories.html">Accessories </a></li>
+    <li><a href="Consoles.html">Consoles</a></li>
+    <li><a href="About_us.html">About us</a></li>
+  </ul>
 
 
-<h3>You might be interested in</h3>
+  <h3>You might be interested in</h3>
 
 
-<section class="filter">
+  <section class="filter">
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button><br>
-  <button class="btn" onclick="filterSelection('PS1')"> Playstation 1</button><br>
-  <button class="btn" onclick="filterSelection('PS2')"> Playstation 2</button><br>
-  <button class="btn" onclick="filterSelection('PS3')"> Playstation 3</button><br>
-  <button class="btn" onclick="filterSelection('PS4')"> Playstation 4</button><br>
-  <button class="btn" onclick="filterSelection('PS5')"> Playstation 5</button>
-</div>
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button><br>
+      <button class="btn" onclick="filterSelection('PS1')"> Playstation 1</button><br>
+      <button class="btn" onclick="filterSelection('PS2')"> Playstation 2</button><br>
+      <button class="btn" onclick="filterSelection('PS3')"> Playstation 3</button><br>
+      <button class="btn" onclick="filterSelection('PS4')"> Playstation 4</button><br>
+      <button class="btn" onclick="filterSelection('PS5')"> Playstation 5</button>
+    </div>
 
-<div class="container">
-  <div class="filterDiv PS1">BMW</div>
-  <div class="filterDiv colors fruits">Orange</div>
-  <div class="filterDiv cars">Volvo</div>
-  <div class="filterDiv colors">Red</div>
-  <div class="filterDiv cars">Ford</div>
-  <div class="filterDiv colors">Blue</div>
-  <div class="filterDiv animals">Cat</div>
-  <div class="filterDiv animals">Dog</div>
-  <div class="filterDiv fruits">Melon</div>
-  <div class="filterDiv fruits animals">Kiwi</div>
-  <div class="filterDiv fruits">Banana</div>
-  <div class="filterDiv fruits">Lemon</div>
-  <div class="filterDiv animals">Cow</div>
-</div>
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
+    <div class="container">
+      <div class="filterDiv PS1">BMW</div>
+      <div class="filterDiv colors fruits">Orange</div>
+      <div class="filterDiv cars">Volvo</div>
+      <div class="filterDiv colors">Red</div>
+      <div class="filterDiv cars">Ford</div>
+      <div class="filterDiv colors">Blue</div>
+      <div class="filterDiv animals">Cat</div>
+      <div class="filterDiv animals">Dog</div>
+      <div class="filterDiv fruits">Melon</div>
+      <div class="filterDiv fruits animals">Kiwi</div>
+      <div class="filterDiv fruits">Banana</div>
+      <div class="filterDiv fruits">Lemon</div>
+      <div class="filterDiv animals">Cow</div>
+    </div>
+    <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
 
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
   // https://www.w3schools.com/howto/howto_js_filter_elements.asp
- 
-</script>
 
-</section>
+    </script>
+
+  </section>
 
 
 
-<section class="products">
-  <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://m.media-amazon.com/images/I/517rgLnJbQL.jpg" href="https://www.google.com">
-  <div class="text-block">
-    <h4>PS4 camera</h4>
-    <p>80.00-</p>
-  </div>
-</div>
-  <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSdyAZSdftpk9H2TwYEXPTEvgqmqcK2-Hwq6B_yxSCT9LlhH9MOx3fKPF0viyCMYnxkny3vmiqx7RzdU5mfSy2CtYfQ-Oa4qlBNbb_Y9kEkqa3MU_z4LfMZhG9trwe-&usqp=CAc" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Gaming headset</h4>
-    <p>5.00,-</p>
-  </div>
-</div>
+  <section class="products">
     <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://www.backmarket.nl/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D260/https://d2e6ccujb3mkqf.cloudfront.net/7be2695b-dc97-47d5-aecf-377aa25f0649-1_75667e43-1c3f-4a09-8916-df60301fb6e7.jpg" href="https://www.google.com">
-  <div class="text-block">
-    <h4>PS2 slim</h4>
-    <p>119.99-</p>
-  </div>
-</div>
+      <img class="imgstyle" style="border:3px solid #000000;" src="https://m.media-amazon.com/images/I/517rgLnJbQL.jpg"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>PS4 camera</h4>
+        <p>80.00-</p>
+      </div>
+    </div>
     <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/8eb58368ee7a6c94b1b3077df7bf6226dfa83af4.jpg?20230926075538" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Batman Arkham Knight</h4>
-    <p>9.95,-</p>
-  </div>
-</div>
-
-  <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://www.gooplaystation4.nl/images/thumbnails/460/460/detailed/20/ps4-slim-kopen.jpg" href="https://www.google.com">
-  <div class="text-block">
-    <h4>PS4 slim</h4>
-    <p>249.99-</p>
-  </div>
-</div>
-  <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/1a1c70e32e2c4d56e89566731876d43fe239b22f.jpg?20230926075538" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Assassin’s Creed Rogue </h4>
-    <p>24.95,-</p>
-  </div>
-</div>
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSdyAZSdftpk9H2TwYEXPTEvgqmqcK2-Hwq6B_yxSCT9LlhH9MOx3fKPF0viyCMYnxkny3vmiqx7RzdU5mfSy2CtYfQ-Oa4qlBNbb_Y9kEkqa3MU_z4LfMZhG9trwe-&usqp=CAc"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Gaming headset</h4>
+        <p>5.00,-</p>
+      </div>
+    </div>
     <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSNu-OaatD7sKz-D0MEvxdpg6iv-HbEb8GDDMaKU3i27AV5ClcTd4fqpLnrmSgRFUf6Hv4SUjia9lsOfxYAjERF1NLwmCHYO5H4rPNQbjCJYCmnm4RT3SEimkLa6OUfrg&usqp=CAc" href="https://www.google.com">
-  <div class="text-block">
-    <h4>PS5 controller toetsenbord</h4>
-    <p>26.95,-</p>
-  </div>
-</div>
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://www.backmarket.nl/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D260/https://d2e6ccujb3mkqf.cloudfront.net/7be2695b-dc97-47d5-aecf-377aa25f0649-1_75667e43-1c3f-4a09-8916-df60301fb6e7.jpg"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>PS2 slim</h4>
+        <p>119.99-</p>
+      </div>
+    </div>
     <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/4e594a8d462caad33a72fcd9b0f911badc8dc8b5.jpg?20230926075538" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Death Stranding</h4>
-    <p>33.95,-</p>
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/8eb58368ee7a6c94b1b3077df7bf6226dfa83af4.jpg?20230926075538"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Batman Arkham Knight</h4>
+        <p>9.95,-</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://www.gooplaystation4.nl/images/thumbnails/460/460/detailed/20/ps4-slim-kopen.jpg"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>PS4 slim</h4>
+        <p>249.99-</p>
+      </div>
+    </div>
+    <div class="product">
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/1a1c70e32e2c4d56e89566731876d43fe239b22f.jpg?20230926075538"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Assassin’s Creed Rogue </h4>
+        <p>24.95,-</p>
+      </div>
+    </div>
+    <div class="product">
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSNu-OaatD7sKz-D0MEvxdpg6iv-HbEb8GDDMaKU3i27AV5ClcTd4fqpLnrmSgRFUf6Hv4SUjia9lsOfxYAjERF1NLwmCHYO5H4rPNQbjCJYCmnm4RT3SEimkLa6OUfrg&usqp=CAc"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>PS5 controller toetsenbord</h4>
+        <p>26.95,-</p>
+      </div>
+    </div>
+    <div class="product">
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/4e594a8d462caad33a72fcd9b0f911badc8dc8b5.jpg?20230926075538"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Death Stranding</h4>
+        <p>33.95,-</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div id="page-container">
+    <div id="content-wrap">
+      <!-- all other page content -->
+    </div>
+    <footer id="footer">
+      <p class="marg">H5C</p <p class="marg">Meijerink</p>
+      <p class="marg">Lara Altena & Lucas de Leur</p>
+      <p class="marg">19790@sjl.nl & 20739@sjl.nl</p>
+      <p class="marg">2023</p>
+    </footer>
   </div>
-</div>
+</body>
 
-</section>
-
-     <div id="page-container">
-   <div id="content-wrap">
-     <!-- all other page content -->
-   </div>
-   <footer id="footer">
-    <p class="marg">H5C</p
-    <p class="marg">Meijerink</p>
-    <p class="marg">Lara Altena & Lucas de Leur</p>
-    <p class="marg">19790@sjl.nl & 20739@sjl.nl</p>
-    <p class="marg">2023</p>
-   </footer>
- </div>
-  </body>
 </html>

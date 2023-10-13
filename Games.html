@@ -1,178 +1,197 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <link rel="stylesheet" href="Style.css">
-        <link rel="icon" type="images/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1280px-Playstation_logo_colour.svg.png" />
-      <title>PSFlip</title>
-  </head>
-  <body>
-      <header id="bannerimage">
-        <br>
-        <h1>PSFlip</h1>
-        <h2>Flip your old games for something you have never played before!</h2>
-        <br>
-      </header>
-    <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a class="active" href="Games.html">Games</a></li>
-  <li><a href="Accessories.html">Accessories </a></li>
-  <li><a href="Consoles.html">Consoles</a></li>
-  <li><a href="About_us.html">About us</a></li>
-</ul>
-    
 
-<h3>Your favorite games!</h3>
+<head>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="icon" type="images/x-icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1280px-Playstation_logo_colour.svg.png" />
+  <title>PSFlip</title>
+</head>
+
+<body>
+  <header id="bannerimage">
+    <br>
+    <h1>PSFlip</h1>
+    <h2>Flip your old games for something you have never played before!</h2>
+    <br>
+  </header>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active" href="Games.html">Games</a></li>
+    <li><a href="Accessories.html">Accessories </a></li>
+    <li><a href="Consoles.html">Consoles</a></li>
+    <li><a href="About_us.html">About us</a></li>
+  </ul>
 
 
-<section class="filter">
+  <h3>Your favorite games!</h3>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button><br>
-  <button class="btn" onclick="filterSelection('PS1')"> Playstation 1</button><br>
-  <button class="btn" onclick="filterSelection('PS2')"> Playstation 2</button><br>
-  <button class="btn" onclick="filterSelection('PS3')"> Playstation 3</button><br>
-  <button class="btn" onclick="filterSelection('PS4')"> Playstation 4</button><br>
-  <button class="btn" onclick="filterSelection('PS5')"> Playstation 5</button>
-</div>
 
-<div class="container">
-  <div class="filterDiv PS1">BMW</div>
-  <div class="filterDiv colors fruits">Orange</div>
-  <div class="filterDiv cars">Volvo</div>
-  <div class="filterDiv colors">Red</div>
-  <div class="filterDiv cars">Ford</div>
-  <div class="filterDiv colors">Blue</div>
-  <div class="filterDiv animals">Cat</div>
-  <div class="filterDiv animals">Dog</div>
-  <div class="filterDiv fruits">Melon</div>
-  <div class="filterDiv fruits animals">Kiwi</div>
-  <div class="filterDiv fruits">Banana</div>
-  <div class="filterDiv fruits">Lemon</div>
-  <div class="filterDiv animals">Cow</div>
-</div>
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
+  <section class="filter">
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button><br>
+      <button class="btn" onclick="filterSelection('PS1')"> Playstation 1</button><br>
+      <button class="btn" onclick="filterSelection('PS2')"> Playstation 2</button><br>
+      <button class="btn" onclick="filterSelection('PS3')"> Playstation 3</button><br>
+      <button class="btn" onclick="filterSelection('PS4')"> Playstation 4</button><br>
+      <button class="btn" onclick="filterSelection('PS5')"> Playstation 5</button>
+    </div>
 
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
+    <div class="container">
+      <div class="filterDiv PS1">BMW</div>
+      <div class="filterDiv colors fruits">Orange</div>
+      <div class="filterDiv cars">Volvo</div>
+      <div class="filterDiv colors">Red</div>
+      <div class="filterDiv cars">Ford</div>
+      <div class="filterDiv colors">Blue</div>
+      <div class="filterDiv animals">Cat</div>
+      <div class="filterDiv animals">Dog</div>
+      <div class="filterDiv fruits">Melon</div>
+      <div class="filterDiv fruits animals">Kiwi</div>
+      <div class="filterDiv fruits">Banana</div>
+      <div class="filterDiv fruits">Lemon</div>
+      <div class="filterDiv animals">Cow</div>
+    </div>
+    <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
   // https://www.w3schools.com/howto/howto_js_filter_elements.asp
- 
-</script>
 
-</section>
+    </script>
+
+  </section>
 
 
 
-<section class="products">
-  <div class="product" class="filterDiv PS1">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/7120a6fe3bb3ca65d5a3d0dc81fcdc9b604567c8.jpg?20231003115717" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Codemasters Brian Lara Cricket </h4>
-    <p>4.49,-</p>
-  </div>
-</div>
-  <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/2fd2cfaea327902ad2df913337ad5483d0375d4c.jpg?20230926075538" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Aliens Colonial Marines </h4>
-    <p>14.95,-</p>
-  </div>
-</div>
+  <section class="products">
+    <div class="product" class="filterDiv PS1">
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/7120a6fe3bb3ca65d5a3d0dc81fcdc9b604567c8.jpg?20231003115717"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Codemasters Brian Lara Cricket </h4>
+        <p>4.49,-</p>
+      </div>
+    </div>
     <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/4e594a8d462caad33a72fcd9b0f911badc8dc8b5.jpg?20230926075538" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Death Stranding</h4>
-    <p>33.95,-</p>
-  </div>
-</div>
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/2fd2cfaea327902ad2df913337ad5483d0375d4c.jpg?20230926075538"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Aliens Colonial Marines </h4>
+        <p>14.95,-</p>
+      </div>
+    </div>
     <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/8eb58368ee7a6c94b1b3077df7bf6226dfa83af4.jpg?20230926075538" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Batman Arkham Knight</h4>
-    <p>9.95,-</p>
-  </div>
-</div>
-
-  <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/f0441c3509d5ce74d8d81e49f9d2d3a92557a7cc.jpg?20231003115717" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Area 51 </h4>
-    <p>7.49,-</p>
-  </div>
-</div>
-  <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/1a1c70e32e2c4d56e89566731876d43fe239b22f.jpg?20230926075538" href="https://www.google.com">
-  <div class="text-block">
-    <h4>Assassin’s Creed Rogue </h4>
-    <p>24.95,-</p>
-  </div>
-</div>
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/4e594a8d462caad33a72fcd9b0f911badc8dc8b5.jpg?20230926075538"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Death Stranding</h4>
+        <p>33.95,-</p>
+      </div>
+    </div>
     <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/8d89fb411e4cde1d3084bdbdf796e49a0214d4d4.jpg?20231003115717" href="https://www.google.com">
-  <div class="text-block">
-    <h4>A Plague tale innocence </h4>
-    <p>29.95,-</p>
-  </div>
-</div>
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/8eb58368ee7a6c94b1b3077df7bf6226dfa83af4.jpg?20230926075538"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Batman Arkham Knight</h4>
+        <p>9.95,-</p>
+      </div>
+    </div>
+
     <div class="product">
-  <img class="imgstyle" style="border:3px solid #000000;" src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/d08c341cc06491303171e6374158457408139217.jpg?20230926075538" href="https://www.google.com">
-  <div class="text-block">
-    <h4>007 Quantum of Solace </h4>
-    <p>19.95,-</p>
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/f0441c3509d5ce74d8d81e49f9d2d3a92557a7cc.jpg?20231003115717"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Area 51 </h4>
+        <p>7.49,-</p>
+      </div>
+    </div>
+    <div class="product">
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/1a1c70e32e2c4d56e89566731876d43fe239b22f.jpg?20230926075538"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>Assassin’s Creed Rogue </h4>
+        <p>24.95,-</p>
+      </div>
+    </div>
+    <div class="product">
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/8d89fb411e4cde1d3084bdbdf796e49a0214d4d4.jpg?20231003115717"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>A Plague tale innocence </h4>
+        <p>29.95,-</p>
+      </div>
+    </div>
+    <div class="product">
+      <img class="imgstyle" style="border:3px solid #000000;"
+        src="https://cdn.myonlinestore.eu/93dc98a2-6be1-11e9-a722-44a8421b9960/image/cache/full/d08c341cc06491303171e6374158457408139217.jpg?20230926075538"
+        href="https://www.google.com">
+      <div class="text-block">
+        <h4>007 Quantum of Solace </h4>
+        <p>19.95,-</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div id="page-container">
+    <div id="content-wrap">
+      <!-- all other page content -->
+    </div>
+    <footer id="footer">
+      <p class="marg">H5C</p <p class="marg">Meijerink</p>
+      <p class="marg">Lara Altena & Lucas de Leur</p>
+      <p class="marg">19790@sjl.nl & 20739@sjl.nl</p>
+      <p class="marg">2023</p>
+    </footer>
   </div>
-</div>
 
-</section>
+</body>
 
-         <div id="page-container">
-   <div id="content-wrap">
-     <!-- all other page content -->
-   </div>
-   <footer id="footer">
-    <p class="marg">H5C</p
-    <p class="marg">Meijerink</p>
-    <p class="marg">Lara Altena & Lucas de Leur</p>
-    <p class="marg">19790@sjl.nl & 20739@sjl.nl</p>
-    <p class="marg">2023</p>
-   </footer>
- </div>
-  
-  </body>
 </html>

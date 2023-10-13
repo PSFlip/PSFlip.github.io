@@ -7,7 +7,8 @@ h1 {
   color: #5cc9fb;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-h2{
+
+h2 {
   font-weight: 300;
   font-stretch: extra-expanded;
   font-family: impact, fantasy;
@@ -16,6 +17,7 @@ h2{
   color: #1e5ddb;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
 #bannerimage {
   background-image: url(https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/playstations50.jpg);
   background-repeat: repeat-x;
@@ -23,12 +25,14 @@ h2{
 
 
 }
+
 ul {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -49,18 +53,21 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
+
 li a:hover:not(.active) {
   background-color: #2e393d;
 }
+
 .active {
   background-color: #5cc9fb;
 }
 
-.products::after{
+.products::after {
   clear: both;
   display: block;
   content: "";
 }
+
 .products {
   width: 80%;
   float: right;
@@ -83,6 +90,7 @@ li a:hover:not(.active) {
   padding-left: 3%;
   padding-right: 3%;
 }
+
 .imgstyle {
   width: 100%;
   height: 350px;
@@ -109,13 +117,16 @@ h3 {
   margin: 2px;
   display: none;
 }
+
 .show {
   display: block;
 }
+
 .container {
   margin-top: 20px;
   overflow: hidden;
 }
+
 .btn {
   border: none;
   outline: none;
@@ -123,9 +134,11 @@ h3 {
   background-color: #f1f1f1;
   cursor: pointer;
 }
+
 .btn:hover {
   background-color: #ddd;
 }
+
 .btn.active {
   background-color: #666;
   color: white;
@@ -145,7 +158,8 @@ h3 {
 }
 
 #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 2.5rem;
+  /* Footer height */
 }
 
 #footer {
@@ -164,20 +178,20 @@ footer {
   bottom: 0;
 }
 
-footer p {    
-  display: inline-block;    
+footer p {
+  display: inline-block;
   vertical-align: middle;
 }
 
 .marg {
-margin-left: 8%;
-margin-right: 8%;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 
 .abt_left {
   float: left;
-  background-color:  #2196F3;
+  background-color: #2196F3;
   width: 20%;
   margin-top: 50px;
   height: 870px;
@@ -192,13 +206,14 @@ margin-right: 8%;
   margin-right: 10%;
   height: 870px;
   border-radius: 25px;
-  background: #1e5ddb;;
+  background: #1e5ddb;
+  ;
   align-content: center;
 }
 
 .abt_right {
   float: left;
-  background-color:  #2196F3;
+  background-color: #2196F3;
   width: 20%;
   margin-top: 50px;
   height: 870px;
@@ -227,7 +242,8 @@ h5 {
   width: 60%;
   padding-left: 20%;
   padding-right: 20%;
-  color: #1e5ddb;;
+  color: #1e5ddb;
+  ;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  
+
 }
